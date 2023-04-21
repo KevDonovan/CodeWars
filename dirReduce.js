@@ -1,10 +1,9 @@
 function dirReduc(arr){
-    let directions = ['NORTHSOUTH', 'SOUTHNORTH', 'EASTWEST', 'WESTEAST'];
-    let result = [];
-    
+    let opposites = ['NORTHSOUTH', 'SOUTHNORTH', 'EASTWEST', 'WESTEAST'];
+    let result = [];   
     
     for(let i = 0; i < arr.length; i++) {
-      if (!directions.includes(arr[i] + arr[i + 1])) result.push(arr[i]);
+      if (!opposites.includes(arr[i] + arr[i + 1])) result.push(arr[i]);
       else i++;
     }
   
