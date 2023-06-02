@@ -1,10 +1,7 @@
 function twoSum(numbers, target) {
-  
-    for(let i = 0; i < numbers.length; i++){
-      for(let j = i + 1; j < numbers.length; j++) {
-        if(numbers[i] + numbers[j] == target){
-          return [i, j];
-        }
-      }
+  for(let i = 0; i < numbers.length; i++){
+    if (numbers.slice(i+1).includes(target - numbers[i])) {
+      return [i, numbers.lastIndexOf(target - numbers[i])];
     }
+  }
 }
